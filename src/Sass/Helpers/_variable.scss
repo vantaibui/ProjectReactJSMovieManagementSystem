@@ -1,0 +1,89 @@
+// font-size
+$fs-0: 14px; //default
+$fs-1: 12px;
+$fs-2: 13px;
+$fs-3: 16px;
+$fs-4: 18px;
+$fs-5: 20px;
+$fs-6: 24px;
+// font-weight
+$fw-normal: normal;
+$fw-bold: 600;
+$fw-medium: 500;
+$fw-regular: 400;
+$fw-light: 300;
+// margin
+$mg-0: 5px;
+$mg-2: 8px;
+$mg-3: 10px;
+$mg-4: 13px;
+$mg-5: 15px;
+$mg-6: 20px;
+$mg-7: 25px;
+$mg-8: 30px;
+$mg-9: 35px;
+$mg-10: 40px;
+// padding
+$pd-0: 9px;
+$pd-1: 10px;
+$pd-2: 15px;
+$pd-3: 20px;
+$pd-4: 25px;
+$pd-5: 30px;
+$pd-6: 5px;
+// color
+$color-black-0: #000;
+$color-black-1: #333; //default
+$color-black-2:#222;
+$color-black-3:#0a2029;
+$color-black-4: rgb(10, 32, 41);
+$color-black-5: #3a3a3a;
+$color-black-6: rgba(16, 34, 53, .2);
+$color-white-0: #fff;
+$color-white-1: #ebebec;
+$color-white-2: rgba(238, 238, 238, .88);
+$color-white-3: #FBFBFB;
+$color-white-4: #e9e9e9;
+$color-white-5: #e6e6e6;
+$color-white-6: #e4e4e4;
+$color-red: #fb4226;
+$color-red-1: #e71a0f;
+$color-red-2: #fa7f6c;
+$color-red-3: #ce3017;
+$color-red-4: #C71C22;
+$color-orange: #fa5238;
+$color-orange-1: #f79320;
+$color-gray-0: #949494;
+$color-gray-1: #9b9b9b;
+$color-gray-2: #d8d8d8;
+$color-gray-3: #4a4a4a;
+$color-gray-4: #453C3C;
+$color-gray-5: #e8e8e8;
+$color-gray-6: #e7eaec;
+$color-gray-7: #afafaf;
+$color-gray-8: #fafafa;
+$color-blue-0: #081630;
+$color-blue-1: rgba(8, 22, 48, .9);
+$color-blue-2: #455570;
+$color-blue-3: rgba(20, 50, 93, .9);
+$color-blue-4: #60c5ef;
+$color-blue-5:#1f2e46;
+$color-blue-6: rgba(12, 27, 54, .8);
+$color-blue-7: #4a90e2;
+$color-blue-8: #3e515d;
+$color-blue-9: #321FDB;
+$color-blue-10: #3C4B64;
+$color-blue-11: #46546C;
+$color-blue-12: #303C54;
+$color-brown-1: #b18757;
+$color-green:#00ac4d;
+$color-green-1: #7ED321;
+$color-green-2: #91d25a;
+$color-green-3: #44c020;
+$color-green-4: #108f3e;
+$color-purple-1: #9152f8;
+$color-yellow-1: #f7b500;
+// line-height
+$line-height-1: 1.33;
+//break points
+$breakpoints:( 'extra-large': 1200px, 'large': 992px, 'medium': 768px, 'small': 576px);

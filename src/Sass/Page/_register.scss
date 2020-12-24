@@ -1,0 +1,84 @@
+.formRegister {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+    .formRegister__content {
+        max-width: 780px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 180px 0 100px 0;
+        .content_form {
+            box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+            .formRegister_left {
+                padding: 0;
+                img {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .formRegister_right {
+                background-color: $color-black-0;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                padding: 0;
+                .right__content {
+                    padding: 57px 65px;
+                    padding-bottom: 65px;
+                    .title {
+                        text-align: center;
+                        @include text($color-white-0, $fs-6, $fw-regular);
+                        margin-bottom: $mg-9;
+                    }
+                    .form {
+                        .form-group {
+                            margin-bottom: 33px;
+                            border-bottom: 1px solid rgba($color-white-0, 0.2);
+                            input {
+                                width: 100%;
+                                padding: 5px 0;
+                                background: transparent;
+                                border: none;
+                                @include text($color-white-1, $fs-3, $fw-normal);
+                                &:focus {
+                                    outline: none;
+                                    border: none;
+                                }
+                            }
+                            .form-control {
+                                border: none;
+                                background-color: transparent;
+                                @include text(rgba($color-white-1, 0.5), $fs-3, $fw-normal);
+                                &:focus {
+                                    box-shadow: none;
+                                }
+                                option {
+                                    background-color: $color-white-1;
+                                    @include text($color-black-0, $fs-3, $fw-normal);
+                                }
+                            }
+                        }
+                        .buttonRegister {
+                            text-align: center;
+                            padding-top: $pd-1;
+                            .btnSubmit {
+                                &:focus {
+                                    border: none;
+                                    outline: none;
+                                }
+                                background-color: $color-green-4;
+                                border-radius: 20px;
+                                border: none;
+                                padding: 5px 33px;
+                                @include text($color-white-0, $fs-4, $fw-regular);
+                                transition: all .4s;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

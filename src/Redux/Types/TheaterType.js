@@ -1,0 +1,4 @@
+//  Theater list
+export const FETCH_THEATERS = "FETCH_THEATERS";
+
+export const FETCH_THEATER_IN_THE_SYSTEM = "FETCH_THEATER_IN_THE_SYSTEM";

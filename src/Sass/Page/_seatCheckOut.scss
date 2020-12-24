@@ -1,0 +1,214 @@
+.seatCheckOut {
+    .bookingLeft {
+        float: left;
+        width: 26%;
+        position: fixed;
+        left: -22%;
+        // background-image: url(../img/sac-dep-doi-tra-false-beauty-15803703114281.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 640px;
+        .backgroundColor {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: $color-black-0;
+            opacity: 0.7;
+        }
+    }
+    .bookingRight {
+        float: left;
+        width: 69.7%;
+        margin-left: 4.3%;
+        padding-top: 30px;
+        .bookingRight__content {
+            max-width: 1000px;
+            margin: auto;
+            text-align: center;
+            .top {
+                width: 90%;
+                height: 60px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                .topLeft {
+                    display: flex;
+                    align-items: center;
+                    img {
+                        margin-right: $mg-4;
+                    }
+                    .leftIntro {
+                        p {
+                            margin-bottom: $mg-3;
+                            text-align: left;
+                            @include text($color-gray-1, $fs-0, $fw-regular);
+                        }
+                        p:first-child {
+                            margin-top: 1px;
+                            span {
+                                color: $color-black-0;
+                            }
+                        }
+                        p:last-child {
+                            line-height: 5px;
+                        }
+                    }
+                }
+                .topRight {
+                    margin-top: $mg-3;
+                    display: flex;
+                    justify-content: flex-end;
+                    .rightItem {
+                        text-align: center;
+                        p {
+                            margin-bottom: $mg-3;
+                            @include text($color-gray-1, $fs-2 - 2, $fw-regular);
+                        }
+                        p:first-child {
+                            line-height: 0;
+                        }
+                        p:last-child {
+                            line-height: 1;
+                            @include text($color-red, $fs-6 + 5, $fw-medium);
+                        }
+                    }
+                }
+            }
+            .bottom {
+                margin-top: $mg-3;
+                img {
+                    width: 90%;
+                    margin: auto;
+                }
+                .listChair {
+                    width: 70%;
+                    margin: auto;
+                    margin-top: -$mg-5;
+                    .listItem {
+                        margin: 0;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        .chairRow {
+                            padding: 0;
+                            .seat {
+                                width: 30px;
+                                padding: 4px;
+                                margin: 3px 2px;
+                                color: $color-white-0;
+                                background-color: $color-blue-8;
+                                border: none;
+                                cursor: pointer;
+                                @extend .border-radius;
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+                            .seatVIP {
+                                background-color: $color-yellow-1;
+                            }
+                            .seatDeluxe {
+                                background-color: $color-blue-7;
+                            }
+                            .seatSelected {
+                                background-color: $color-green-3;
+                            }
+                            .seatWasSelected {
+                                background-color: $color-gray-6;
+                            }
+                            .seatNotSelected {
+                                color: $color-black-0;
+                                background-color: $color-black-6;
+                                cursor: not-allowed;
+                            }
+                        }
+                    }
+                }
+                .noteChair {
+                    margin-top: $mg-7 * 2;
+                    .chairStatus {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: $mg-0;
+                        p {
+                            @include text($color-gray-1, $fs-1, $fw-regular);
+                            margin: 0;
+                        }
+                        i {
+                            @include icon($color-green-3, $fs-0);
+                            line-height: 1;
+                        }
+                        .statusT {
+                            i {
+                                color: #3e515d;
+                            }
+                        }
+                        .statusVIP {
+                            margin: 0 $mg-6 + 1;
+                            i {
+                                color: #f7b500;
+                            }
+                        }
+                        .statusDeluxe {
+                            i {
+                                color: #4a90e2;
+                            }
+                        }
+                        .statusY {
+                            margin: 0 $mg-6 + 1;
+                            i {
+                                @include icon($color-green-3, $fs-0);
+                            }
+                        }
+                        .statusN {
+                            margin-right: $mg-6 + 1;
+                            i {
+                                @include icon($color-gray-6, $fs-0);
+                                opacity: 0.8;
+                            }
+                        }
+                    }
+                    .chairPosition {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: $mg-0;
+                        padding-bottom: $pd-3;
+                        span {
+                            @include text($color-gray-1, $fs-1, $fw-regular);
+                        }
+                        .chairCenter {
+                            margin-right: $mg-6;
+                            position: relative;
+                            left: -1%;
+                            span:first-child {
+                                position: absolute;
+                                top: 50%;
+                                left: -40%;
+                                width: 28px;
+                                margin-right: $mg-2;
+                                transform: translate(-50%, -50%);
+                                border-top: 2px dashed $color-red-2;
+                            }
+                        }
+                        .chairNice {
+                            position: relative;
+                            left: 3%;
+                            span:first-child {
+                                position: absolute;
+                                top: 50%;
+                                left: -50%;
+                                width: 28px;
+                                margin-right: $mg-2;
+                                transform: translate(-50%, -50%);
+                                border-top: 2px solid $color-red-2;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

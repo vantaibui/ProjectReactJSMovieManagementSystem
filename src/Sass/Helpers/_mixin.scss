@@ -1,0 +1,84 @@
+@mixin text($color, $fs, $fw) {
+    color: $color;
+    font: {
+        size: $fs;
+        weight: $fw;
+    }
+}
+
+@mixin icon($color, $fs) {
+    color: $color;
+    font-size: $fs;
+}
+
+@mixin button($color, $fs, $fw, $background-color, $color-border, $color-hover, $background-color-hover, $color-border-hover, $border-radius, $pd-top-bottom, $pd-left-right) {
+    // color: $color;
+    // font-size: $fs;
+    // font-weight: $fw;
+    @include text($color, $fs, $fw);
+    background-color: $background-color;
+    border: 1px solid $color-border !important;
+    border-radius: $border-radius;
+    padding: $pd-top-bottom $pd-left-right;
+    &:hover {
+        color: $color-hover;
+        background-color: $background-color-hover;
+        border: 1px solid $color-border-hover !important;
+    }
+}
+
+@mixin span ($width, $bg-color, $border-radius, $color, $fs, $fw, $text-align, $pd-t-b, $pd-l-r) {
+    min-width: $width;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    @include text($color, $fs, $fw);
+    text-align: $text-align;
+    padding: $pd-t-b $pd-l-r;
+}
+
+// Media Query
+@mixin mediaQueryMax($type) {
+    @if $type==getBreakpoints('extra-large') {
+        @media screen and (max-width: getBreakpoints('extra-large')) {
+            @content;
+        }
+    }
+    @else if $type==getBreakpoints('large') {
+        @media screen and (max-width: getBreakpoints('large')) {
+            @content;
+        }
+    }
+    @else if $type==getBreakpoints('medium') {
+        @media screen and (max-width: getBreakpoints('medium')) {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (max-width: getBreakpoints('small')) {
+            @content;
+        }
+    }
+}
+
+@mixin mediaQueryMin($type) {
+    @if $type==getBreakpoints('extra-large') {
+        @media screen and (min-width: getBreakpoints('extra-large')) {
+            @content;
+        }
+    }
+    @else if $type==getBreakpoints('large') {
+        @media screen and (min-width: getBreakpoints('large')) {
+            @content;
+        }
+    }
+    @else if $type==getBreakpoints('medium') {
+        @media screen and (min-width: getBreakpoints('medium')) {
+            @content;
+        }
+    }
+    @else {
+        @media screen and (min-width: getBreakpoints('small')) {
+            @content;
+        }
+    }
+}

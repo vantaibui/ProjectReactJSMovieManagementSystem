@@ -1,0 +1,54 @@
+.headerBooking {
+    width: 71.3%;
+    height: 80px;
+    .navbar {
+        padding: 0;
+        @extend .box-shadow-1;
+        background-color: $color-white-0;
+        flex-direction: row;
+        .headerLeft {
+            padding: 0;
+            .navbar--left {
+                padding-left: 40px;
+                .navbar-nav {
+                    flex: none;
+                    .nav-item {
+                        padding: 0 $pd-5;
+                        line-height: 80px;
+                        @include text($color-black-0, $fs-0, $fw-medium);
+                        p {
+                            margin: 0;
+                            span {
+                                margin-right: $mg-0;
+                            }
+                        }
+                        &.active {
+                            color: $color-red;
+                            p {
+                                border-top: 1.5px solid $color-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .headerRight {
+            text-align: right;
+            padding: 0;
+            right: 3%;
+            p {
+                margin: 0;
+                padding-right: $pd-1;
+                cursor: pointer;
+                text-transform: uppercase;
+                @include text($color-gray-1, $fs-0, $fw-regular);
+                img {
+                    width: 30px;
+                    height: auto;
+                    margin-right: $mg-0;
+                    border-radius: 25px;
+                }
+            }
+        }
+    }
+}

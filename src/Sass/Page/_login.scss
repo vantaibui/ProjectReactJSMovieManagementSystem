@@ -1,0 +1,77 @@
+.formLogin {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 750px;
+    background-image: url(/img/bgBodyLogin.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .formLogin__content {
+        position: absolute;
+        width: 1123px;
+        margin-top: 50px;
+        margin-bottom: 70px;
+        padding-top: 135px;
+        background-image: url(/img/bgLogin.png);
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: cover;
+        overflow: hidden;
+        .signUp {
+            float: right;
+            width: 562px;
+            background: rgba(177, 135, 77, 0.75);
+            .signUp_form {
+                padding: 60px 85px 80px 55px;
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    margin-bottom: $mg-6;
+                    @include text($color-white-0, $fs-6 + 6, $fw-bold);
+                }
+                .form-group {
+                    margin-bottom: $mg-8;
+                    input {
+                        height: 30px;
+                        width: 100%;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid $color-white-1;
+                        @include text($color-white-0, $fs-0, $fw-bold);
+                        &::placeholder {
+                            @include text($color-white-0, $fs-3, $fw-regular);
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                    .btnRegister {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        margin-left: $mg-0;
+                        @include text($color-white-0, $fs-0, $fw-regular);
+                    }
+                }
+                .btnSinUp {
+                    margin-top: $mg-10;
+                    .btnSubmit {
+                        &:hover {
+                            @include text($color-white-0, $fs-3, $fw-bold);
+                            background-color: $color-brown-1;
+                        }
+                        width: 130px;
+                        padding: $pd-1;
+                        border-radius: 25px;
+                        border: none;
+                        text-transform: uppercase;
+                        @include text($color-brown-1, $fs-3, $fw-bold);
+                        transition: all .8s;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}

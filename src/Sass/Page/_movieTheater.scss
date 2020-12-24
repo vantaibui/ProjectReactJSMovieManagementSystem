@@ -1,0 +1,157 @@
+.movieTheater {
+    margin: auto;
+    padding-bottom: $pd-3 * 2;
+    max-width: 940px;
+    width: 100%;
+    .movieTheater__background {
+        padding-top: $pd-3 * 6;
+        background-image: url(/img/back-news.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .movieTheater__content {
+        background-color: $color-white-0;
+        display: flex;
+        .nav {
+            float: left;
+            width: 10%;
+            min-height: 705px;
+            border: 1px solid $color-white-1;
+            border-radius: 4px 0 4px 0;
+            .nav-link {
+                width: 100%;
+                border: none;
+                text-align: center;
+                border-radius: 0;
+                padding: 20px;
+                transition: all .2s;
+                img {
+                    width: 50px;
+                    opacity: .5;
+                }
+                &:hover,
+                &.active {
+                    background-color: $color-white-0;
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            float: left;
+            width: 32%;
+            height: 705px;
+            overflow: auto;
+            text-align: center;
+            border: 1px solid $color-white-1;
+            border-left: none;
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            &::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+            &::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+            .cinemaLocation {
+                &.active,
+                &:hover {
+                    opacity: 1;
+                }
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                text-align: left;
+                border-bottom: 1px solid $color-white-1;
+                padding: $pd-3 $pd-2 $pd-2 $pd-3;
+                opacity: 0.5;
+                cursor: pointer;
+                clear: both;
+                .imgCinema {
+                    float: left;
+                    width: 50px;
+                    height: 50px;
+                }
+                .cinemaInfo {
+                    padding-left: 10px !important;
+                    float: left;
+                    width: (100% - 19%);
+                    p:first-child {
+                        margin: 0;
+                        @include text($color-black-0, $fs-0, $fw-normal);
+                        line-height: 1.4;
+                        span {
+                            color: $color-red-1;
+                        }
+                    }
+                    p:nth-child(2) {
+                        margin: 0;
+                        @include text($color-gray-0, $fs-1, $fw-normal);
+                        line-height: 1.4;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                    }
+                    p:last-child {
+                        margin: 0;
+                        line-height: 1.4;
+                        a {
+                            @include text($color-red, $fs-1, $fw-normal);
+                            &:hover {
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .listMovie {
+            float: left;
+            width: 58%;
+            min-height: 705px;
+            text-align: center;
+            border: 1px solid $color-white-1;
+            border-left: none;
+            border-radius: 0 4px 0 4px;
+            p {
+                @include text($color-black-0, $fs-3 - 1, $fw-normal);
+                margin: $mg-8 0 $mg-3;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 678px) {
+    .movieTheater {
+        .movieTheater__background {
+            padding-top: $pd-3 * 5;
+        }
+        .movieTheater__content {
+            display: block;
+            .nav {
+                float: none;
+                border: none;
+                min-height: auto;
+            }
+            .tab-content {
+                float: none;
+                border: none;
+                width: 100%;
+                .cinemaLocation {
+                    padding: $pd-2 $pd-2 $pd-2 $pd-3;
+                }
+            }
+            .listMovie {
+                float: none;
+                border: none;
+                width: 100%;
+                height: 705px;
+            }
+        }
+    }
+}

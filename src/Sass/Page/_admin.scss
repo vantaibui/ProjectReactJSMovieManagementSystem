@@ -1,0 +1,152 @@
+.sideBar {
+    width: 100%;
+    .sideBar__header {
+        background-color: rgba(255, 255, 255, .95);
+        .header-left {
+            background: $color-blue-12;
+            padding: 5px 25px;
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+                img {
+                    margin-right: 10px;
+                    width: 50px;
+                    height: 50px;
+                }
+                span {
+                    @include text($color-gray-7, $fs-2, $fw-bold);
+                }
+            }
+        }
+        .header-right {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include text($color-black-0, $fs-4, $fw-regular);
+        }
+    }
+    .sideBar__content {
+        .contentNav {
+            height: auto;
+            padding: 0;
+            background: $color-blue-10;
+            .nav {
+                display: flex;
+                flex-direction: column;
+                .nav-item {
+                    &:hover {
+                        background: $color-blue-9;
+                    }
+                    .nav-link {
+                        &.active {
+                            background: $color-blue-11;
+                            color: $color-white-0;
+                        }
+                        i {
+                            margin: 0 5px;
+                        }
+                        transition: all 0.5s;
+                        padding: 15px 20px;
+                        @include text($color-gray-2, $fs-3, $fw-regular);
+                    }
+                }
+            }
+        }
+        .contentTab {
+            height: auto;
+            background: $color-gray-6;
+            padding: 0;
+            .abc {
+                margin: 20px;
+                padding: 20px;
+                border-radius: 5px;
+                background: $color-white-0;
+                .tab-content {
+                    .tab-pane {
+                        text-align: right;
+                        .btnAdd {
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            &:focus {
+                                outline: none;
+                            }
+                            @include text($color-white-0, $fs-3, $fw-regular);
+                            padding: 12px 12px;
+                            margin-bottom: 10px;
+                            background: $color-green-3;
+                            border: none;
+                            border-radius: 4px;
+                            i {
+                                margin-right: 5px;
+                            }
+                        }
+                        .table {
+                            text-align: center;
+                            thead {
+                                tr {
+                                    border: 1px solid $color-gray-2;
+                                    border-spacing: 0;
+                                    background: $color-gray-2;
+                                    th {
+                                        @include text(rgba($color-gray-3, 0.8), $fs-3, $fw-bold);
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    border: 1px solid $color-gray-2;
+                                    td {
+                                        padding: 12px;
+                                        .btnDel,
+                                        .btnEdit {
+                                            background: $color-red;
+                                            border: none;
+                                            outline: none;
+                                            padding: 5px 10px;
+                                            margin: 5px;
+                                            @extend .border-radius;
+                                        }
+                                        .btnEdit {
+                                            background: $color-blue-7;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .search-box {
+                            background: $color-blue-11;
+                            height: 50px;
+                            padding: 10px;
+                            margin-bottom: 20px;
+                            border-radius: 40px;
+                            .search-txt {
+                                &::placeholder {
+                                    @include text($color-gray-0, $fs-3, $fw-regular);
+                                }
+                                background: none;
+                                border: none;
+                                outline: none;
+                                float: left;
+                                line-height: 30px;
+                                transition: all 0.4s;
+                                @include text($color-white-0, $fs-3, $fw-regular);
+                            }
+                            .search-btn {
+                                color: $color-red;
+                                line-height: 40px;
+                                &:hover {
+                                    text-decoration: none;
+                                }
+                                i {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

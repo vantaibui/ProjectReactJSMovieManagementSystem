@@ -1,0 +1,159 @@
+.checkOut {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 440px;
+    height: auto;
+    min-height: 720px;
+    @extend .box-shadow-1;
+    .checkOut__content {
+        padding: 0 40px 100px;
+        .total {
+            @extend .borderDashed;
+            margin-bottom: 15px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            p {
+                width: 300px;
+                margin: auto;
+                text-align: center;
+                line-height: 80px;
+                @include text($color-green-3, $fs-4 * 2, $fw-medium);
+                margin-bottom: $mg-3;
+            }
+        }
+        .infoFilm {
+            @extend .borderDashed;
+            padding-bottom: $pd-2 - 2.5;
+            p {
+                margin: 0;
+                @include text($color-black-0, $fs-0, $fw-regular);
+            }
+            p:first-child {
+                margin-bottom: $mg-0;
+                @include text($color-black-0, $fs-3, $fw-medium);
+                span {
+                    float: left;
+                    margin-right: $mg-0;
+                }
+            }
+        }
+        .showTimesCode {
+            @extend .borderDashed;
+            padding: $pd-2 - 2.5 0;
+            p {
+                margin: 0;
+                @include text($color-red, $fs-0, $fw-regular);
+            }
+        }
+        .chair {
+            @extend .borderDashed;
+            padding: $pd-2 - 2.5 0;
+            margin-bottom: $mg-5 - 2.5;
+            p {
+                margin: 0;
+            }
+            .itemChair {
+                padding-left: $pd-1;
+                @include text($color-red, $fs-0, $fw-regular);
+                img {
+                    margin-right: $mg-2 + 1;
+                    width: 17px;
+                    height: 22px;
+                }
+            }
+            .itemPrice {
+                text-align: right;
+                padding: 0 $pd-1;
+                p {
+                    @include text($color-green-3, $fs-4, $fw-medium);
+                }
+            }
+        }
+        .userName {
+            position: relative;
+            @extend .borderDashed;
+            margin-bottom: $mg-4 - 0.5;
+            padding-bottom: $pd-2 - 2.5;
+            label {
+                position: absolute;
+                margin: 0;
+                top: 0;
+                left: 0;
+                cursor: pointer;
+                transition: all 0.3s;
+                @include text($color-gray-1, $fs-3, $fw-regular);
+            }
+            input {
+                width: 100%;
+                padding-right: $pd-1 / 2;
+                border: none;
+                margin-top: $mg-0;
+                @include text($color-black-0, $fs-1, $fw-regular);
+                cursor: auto;
+                transition: all 0.3s;
+                &:focus {
+                    margin-top: $mg-0;
+                    padding-top: $pd-2 - 2.5;
+                    outline: none;
+                    +label {
+                        @include text($color-blue-7, $fs-1, $fw-light);
+                        top: 2px;
+                    }
+                }
+            }
+        }
+        .btnBuyTicket {
+            position: absolute;
+            padding-top: $pd-2;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            button {
+                &:hover {
+                    background-color: $color-red;
+                }
+                padding: 0;
+                background-color: $color-gray-7;
+                border-radius: 0;
+                width: 100%;
+                height: 60px;
+                @include text($color-white-4, $fs-6, $fw-regular);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: getBreakpoints("medium")) and (max-width: getBreakpoints("large")) {
+    .checkOut {
+        width: 210px;
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("medium")) {
+    .checkOut {
+        display: none;
+    }
+}
+
+@media screen and (min-width: getBreakpoints("medium")) and (max-width: 950px) {
+    .checkOut {
+        width: 220px;
+        min-height: 629px;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: getBreakpoints("large")) {
+    .checkOut {
+        width: 280px;
+        min-height: 629px;
+    }
+}
+
+@media screen and (min-width: getBreakpoints("large")) and (max-width: getBreakpoints("extra-large")) {
+    .checkOut {
+        width: 280px;
+        min-height: 630px;
+    }
+}

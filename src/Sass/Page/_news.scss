@@ -1,0 +1,183 @@
+.news {
+    margin: auto;
+    max-width: 940px;
+    width: 100%;
+    height: 100%;
+    .news__nav {
+        padding: $pd-3 * 6 0 $pd-3;
+        // background-image: url(../../img/back-news.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .nav {
+            border: none;
+            justify-content: center;
+            height: 35px;
+            .nav-item {
+                .nav-link {
+                    @include text($color-black-0, $fs-5, $fw-normal);
+                    line-height: 24px;
+                    height: 24px;
+                    padding: $pd-1 $pd-2;
+                    border: none;
+                    transition: all .2s;
+                    &.active {
+                        @include text($color-orange, $fs-6, $fw-normal);
+                        background: linear-gradient(to bottom, $color-white-3, $color-white-0);
+                        &:hover {
+                            @include text($color-orange, $fs-6, $fw-normal);
+                        }
+                    }
+                    &:hover {
+                        @include text($color-black-0, $fs-6, $fw-normal);
+                    }
+                }
+            }
+        }
+    }
+    .news__content {
+        width: 100%;
+        background-color: white;
+        .tab-content {
+            .introduce,
+            .review {
+                .introduce__item,
+                .review__item {
+                    float: left;
+                    width: 50%;
+                    margin-bottom: 20px;
+                    padding: 0 7.5px;
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        img {
+                            width: 100%;
+                            @extend .border-radius;
+                            margin-bottom: 10px;
+                        }
+                        p {
+                            margin: 5px 0;
+                            @include text($color-black-0, $fs-3, $fw-medium);
+                            line-height: 20px;
+                            height: 42px;
+                            transition: all .2s;
+                            &:hover {
+                                color: $color-red;
+                            }
+                        }
+                    }
+                    p {
+                        @include text($color-gray-3, $fs-2, $fw-normal);
+                        margin-bottom: $mg-5;
+                        padding-right: $pd-0 - 4;
+                    }
+                    .item__icon {
+                        display: flex;
+                        align-content: center;
+                        .like {
+                            margin-right: $mg-7;
+                            img {
+                                margin: $mg-0 - 3 $mg-3 0 0;
+                                width: 18px;
+                                height: auto;
+                            }
+                            span {
+                                color: #BBBBBB;
+                            }
+                        }
+                        .comment {
+                            a {
+                                img {
+                                    margin: $mg-0 - 3 $mg-3 0 0;
+                                    width: 18px;
+                                    height: auto;
+                                }
+                                span {
+                                    color: #BBBBBB;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .review {
+                width: 100%;
+                .review__item {
+                    float: left;
+                    width: 33.33%;
+                    p {
+                        height: 55px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                .review__itemEnd {
+                    float: left;
+                    width: 33.33%;
+                    .endItem {
+                        .imgReview {
+                            float: left;
+                            width: 19%;
+                            img {
+                                width: 50px;
+                                height: 50px;
+                                @extend .border-radius;
+                                margin-bottom: $mg-3;
+                            }
+                        }
+                        .introReview {
+                            float: left;
+                            width: 81%;
+                            margin-bottom: $mg-0;
+                            padding-left: $pd-1;
+                            @include text($color-black-0, $fs-3, $fw-normal);
+                            line-height: 20px;
+                            height: 42px;
+                            opacity: .7;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: pre-line;
+                            transition: all .2s;
+                            &:hover {
+                                color: $color-red;
+                            }
+                        }
+                    }
+                }
+            }
+            .newsButton {
+                margin-bottom: $mg-9;
+                .btn--white {
+                    margin: $mg-9 0 $mg-6;
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints('small')) {
+    .news {
+        .news__nav {
+            padding: $pd-4 * 3.6 0 $pd-3;
+        }
+        .news__content {
+            .introduce {
+                .introduce__item {
+                    width: 100% !important;
+                    padding: 0 $pd-1 !important;
+                }
+            }
+            .review {
+                .review__item {
+                    width: 100% !important;
+                    padding: 0 $pd-1 !important;
+                }
+                .review__itemEnd {
+                    width: 100% !important;
+                    padding: 0 $pd-1 !important;
+                }
+            }
+        }
+    }
+}

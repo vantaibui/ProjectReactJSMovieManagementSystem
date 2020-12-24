@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font: {
+        family: 'Roboto', sans-serif;
+        size: 14px;
+    }
+    line-height: 1.43;
+    color: $color-black-1;
+    background-color: $color-white-0;
+}

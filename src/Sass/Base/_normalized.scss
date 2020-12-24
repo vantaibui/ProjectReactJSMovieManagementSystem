@@ -1,0 +1,107 @@
+    // Back-Next Carousel
+    .carousel-control-prev,
+    .carousel-control-next {
+        top: -10%;
+        left: 3%;
+        opacity: 0.5;
+        z-index: 2;
+        width: 0%;
+    }
+    
+    .carousel-control-next {
+        left: unset;
+        right: 2%;
+    }
+    
+    @include mediaQueryMax(getBreakpoints('large')) {
+        .carousel-control-prev,
+        .carousel-control-next {
+            left: 4%;
+        }
+        .carousel-control-next {
+            left: unset;
+            right: 4%;
+        }
+    }
+    
+    // Owl carousel
+    .owl-theme {
+        .owl-nav {
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                padding: 0;
+                margin: 0;
+                top: 28%;
+                left: -7%;
+                span {
+                    font-size: 150px;
+                    opacity: .5;
+                    color: $color-gray-1;
+                }
+                &:focus {
+                    outline: none;
+                }
+                &:hover {
+                    background: none;
+                }
+            }
+            .owl-next {
+                left: unset;
+                right: -7%;
+            }
+        }
+    }
+    
+    // Modal 
+    .modal {
+        // position: absolute;
+        top: 50px;
+        left: -13%;
+        .modal-dialog {
+            .modal-content {
+                background-color: rgba( $color-white-0, 0);
+                border: none;
+                border-radius: 0;
+                button {
+                    opacity: 1;
+                    span {
+                        position: absolute;
+                        top: -20px;
+                        right: -85%;
+                        z-index: 2;
+                    }
+                }
+                iframe {
+                    border: 1px solid $color-gray-4;
+                    width: 900px;
+                    height: 550px;
+                }
+            }
+        }
+    }
+    
+    // Back to top
+    .to-top {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    .cd-top--is-visible {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    .to-top i {
+        border: 2px solid $color-red;
+        color: $color-red;
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 45px;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }

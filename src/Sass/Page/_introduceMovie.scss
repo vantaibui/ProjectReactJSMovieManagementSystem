@@ -1,0 +1,179 @@
+.introduceMovie {
+    .introduceMovie__content {
+        position: relative;
+        overflow: hidden;
+        .backgroundImg {
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 580px;
+                // làm nhòe ảnh
+                filter: blur(15px);
+                object-fit: fill;
+            }
+        }
+        .backgroundLinear {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, $color-black-4, transparent 100%);
+        }
+        .detailMovie {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .imgMovie {
+                position: relative;
+                padding: 0;
+                transition: all .2s;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    @extend .border-radius;
+                }
+                &:hover {
+                    .moviePlay {
+                        opacity: 1;
+                    }
+                }
+                .moviePlay {
+                    position: absolute;
+                    width: 100%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-15%, -50%);
+                    opacity: 0;
+                    transition: all .5s;
+                    img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                }
+            }
+            .inforMovie {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                p {
+                    margin: 0;
+                    @include text($color-white-4, $fs-0, $fw-normal);
+                }
+                p:nth-child(2) {
+                    width: 80%;
+                    span:first-child {
+                        font-size: $fs-3;
+                        margin-top: $mg-0 + 1;
+                        margin-right: $mg-0 + 1;
+                        float: left;
+                    }
+                    span:last-child {
+                        font-size: $fs-6;
+                    }
+                }
+            }
+            .evaluateMovie {
+                position: absolute;
+                top: 50%;
+                right: -8%;
+                transform: translateY(-50%);
+                text-align: center;
+                .percentRated {
+                    svg {
+                        position: relative;
+                        left: 5%;
+                        z-index: 100;
+                        circle {
+                            width: 100%;
+                            height: 100%;
+                            fill: none;
+                            stroke: $color-black-5;
+                            stroke-width: 9;
+                            stroke-linecap: round;
+                            transform: translate(5px, 5px);
+                        }
+                        circle:nth-child(2) {
+                            stroke-dasharray: 170;
+                            stroke-dashoffset: 170;
+                        }
+                    }
+                    &:first-child {
+                        circle:nth-child(1) {
+                            stroke: $color-green-1;
+                        }
+                    }
+                    .number {
+                        position: absolute;
+                        top: 35%;
+                        left: 45%;
+                        transform: translate(-50%, -50%);
+                        span {
+                            @include text($color-white-0, 60px, $fw-normal);
+                        }
+                    }
+                }
+                .starRated {
+                    .star {
+                        // display: flex;
+                        flex-direction: row;
+                        margin: $mg-3 0;
+                        img {
+                            max-width: 25px;
+                            width: 100%;
+                        }
+                    }
+                    span {
+                        flex-direction: row;
+                        @include text($color-white-4, $fs-0, $fw-normal);
+                    }
+                }
+            }
+        }
+        .detailWidth {
+            max-width: 870px;
+            margin: auto;
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .introduceMovie {
+        .introduceMovie__content {
+            .backgroundImg {
+                img {
+                    filter: blur(0);
+                }
+            }
+            .detailMovie {
+                .imgMovie {
+                    img {
+                        display: none;
+                    }
+                    .moviePlay {
+                        opacity: 1;
+                        img {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .inforMovie {
+                    p:nth-child(2) {
+                        width: 100%;
+                        margin: 0;
+                        font-size: 20px;
+                        span:first-child {
+                            display: none;
+                        }
+                    }
+                }
+                .evaluateMovie {
+                    display: none;
+                }
+            }
+        }
+    }
+}

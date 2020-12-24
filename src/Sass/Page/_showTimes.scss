@@ -1,0 +1,279 @@
+.showTimes {
+    .showTimes__content {
+        margin: auto;
+        margin-top: 100px;
+        max-width: 940px;
+        .nav {
+            border: none;
+            height: 35px;
+            margin-bottom: $mg-8;
+            .nav-item {
+                .nav-link {
+                    border: none;
+                    border-radius: 0;
+                    padding: $pd-1 $pd-2;
+                    @include text($color-black-0, $fs-5, $fw-normal);
+                    line-height: 24px;
+                    height: 24px;
+                    transition: all 0.2s;
+                    &:hover {
+                        font-size: $fs-6;
+                    }
+                    &.active {
+                        @include text($color-orange, $fs-6, $fw-normal);
+                    }
+                }
+            }
+        }
+        .tab-content {
+            width: 100%;
+            .nowShowing__content {
+                .row {
+                    margin: 0;
+                    .col-sm-3 {
+                        padding: 0 $pd-1;
+                        .film {
+                            margin-bottom: $mg-7;
+                            &:hover {
+                                text-decoration: none;
+                                cursor: pointer;
+                                .film__image {
+                                    .film__play {
+                                        opacity: 1;
+                                    }
+                                    .film__info {
+                                        .btnTicket {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                            .film__image {
+                                position: relative;
+                                .imgMovie {
+                                    width: 100%;
+                                    height: 300px;
+                                }
+                                img {
+                                    width: 100%;
+                                    // height: 100%;
+                                    @extend .border-radius;
+                                    margin-bottom: $mg-3;
+                                }
+                                .film__play {
+                                    position: absolute;
+                                    top: 0;
+                                    transition: all 0.2s;
+                                    width: 100%;
+                                    height: 96%;
+                                    @extend .border-radius;
+                                    background: linear-gradient( to top, $color-black-0, transparent 100%);
+                                    opacity: 0;
+                                    img {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 48px;
+                                        height: 48px;
+                                        transition: all 0.2s;
+                                        &:hover {
+                                            opacity: 0.7;
+                                        }
+                                    }
+                                }
+                                .typePoint {
+                                    padding: 2px;
+                                    span:first-child {
+                                        position: absolute;
+                                        top: 4%;
+                                        left: 5%;
+                                    }
+                                    .point {
+                                        position: absolute;
+                                        top: 4%;
+                                        right: 5%;
+                                        max-width: 54px;
+                                        width: 100%;
+                                        text-align: center;
+                                        line-height: 1.7;
+                                        @include text($color-white-0, $fs-3, $fw-normal);
+                                        border: 1px solid $color-blue-5;
+                                        @extend .border-radius;
+                                        background-color: $color-blue-6;
+                                        p:first-child {
+                                            margin: 0;
+                                            transform: scaleY(1.2);
+                                        }
+                                        p:last-child {
+                                            margin: 0;
+                                            margin: $mg-0 - 2 0;
+                                            display: flex;
+                                            justify-content: center;
+                                            img {
+                                                margin: 0;
+                                                max-width: 8px;
+                                                width: 100%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .film__info {
+                                position: relative;
+                                p:first-child {
+                                    @include text($color-black-0, $fs-3, $fw-normal);
+                                    margin: 0;
+                                    // height: 42px;
+                                    line-height: 22px;
+                                    cursor: pointer;
+                                    margin: 0;
+                                }
+                                p:last-child {
+                                    @include text($color-gray-3, $fs-2, $fw-normal);
+                                    margin: $mg-2 0 $mg-5;
+                                }
+                                .infoTicket {
+                                    opacity: 0;
+                                    .btnTicket {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        width: 100%;
+                                        padding: 10px;
+                                        border-radius: 4px;
+                                        background: linear-gradient( to left, $color-red, $color-red-3);
+                                        @include text($color-white-0, $fs-4, $fw-regular);
+                                        text-align: center;
+                                        text-transform: uppercase;
+                                        text-decoration: none;
+                                        opacity: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .comingSoon__content {
+                .row {
+                    margin: 0;
+                    .col-sm-3 {
+                        padding: 0 $pd-1;
+                        .film {
+                            margin-bottom: $mg-7;
+                            &:hover {
+                                text-decoration: none;
+                                cursor: pointer;
+                                .film__image {
+                                    .film__play {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                            .film__image {
+                                position: relative;
+                                img {
+                                    width: 100%;
+                                    height: 100%;
+                                    @extend .border-radius;
+                                    margin-bottom: $mg-3;
+                                }
+                                .film__play {
+                                    position: absolute;
+                                    top: 0;
+                                    transition: all 0.2s;
+                                    width: 100%;
+                                    height: 96%;
+                                    @extend .border-radius;
+                                    background: linear-gradient( to top, $color-black-0, transparent 100%);
+                                    opacity: 0;
+                                    img {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 48px;
+                                        height: 48px;
+                                        transition: all 0.2s;
+                                        &:hover {
+                                            opacity: 0.7;
+                                        }
+                                    }
+                                }
+                                .typePoint {
+                                    padding: 2px;
+                                    span:first-child {
+                                        position: absolute;
+                                        top: 4%;
+                                        left: 5%;
+                                    }
+                                    span:last-child {
+                                        position: absolute;
+                                        bottom: 7%;
+                                        right: 5%;
+                                        max-width: 54px;
+                                        padding: $pd-0 - 7;
+                                        text-align: center;
+                                        @include text($color-white-0, $fs-3, $fw-normal);
+                                        border: 1px solid $color-blue-5;
+                                        background-color: $color-blue-6;
+                                        @extend .border-radius;
+                                    }
+                                }
+                            }
+                            .film__info {
+                                p:first-child {
+                                    @include text($color-black-0, $fs-3, $fw-normal);
+                                    margin: 0;
+                                    height: 42px;
+                                    line-height: 22px;
+                                    cursor: pointer;
+                                }
+                                p:last-child {
+                                    @include text($color-gray-3, $fs-2, $fw-normal);
+                                    margin: $mg-2 0 $mg-5;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("small")) {
+    .showTimes {
+        .showTimes__content {
+            .tab-content {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .showTimes {
+        .showTimes__content {
+            .tab-content {
+                .film {
+                    .film__image {
+                        img {
+                            display: none;
+                        }
+                        .film__info {
+                            margin-top: -5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("large")) {
+    .showTimes {
+        padding-top: $pd-4 + 5;
+    }
+}

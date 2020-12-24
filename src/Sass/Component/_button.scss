@@ -1,0 +1,5 @@
+.btn--white {
+    @include button($color-gray-0, $fs-0, $fw-normal, $color-white-0, $color-gray-0, $color-white-0, $color-red, $color-red, 4px, $pd-0 - 2, $pd-4);
+    transition: all .8s !important;
+    cursor: pointer;
+}

@@ -1,0 +1,125 @@
+.header {
+    position: fixed;
+    top: -1px;
+    width: 100%;
+    z-index: 10;
+    @extend .box-shadow-1;
+    background-color: rgba(255, 255, 255, 0.95);
+    .navbar {
+        padding: 0;
+        width: 100% !important;
+        .navbar-toggler {
+            text-align: right;
+            img {
+                width: 25px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .header-left {
+            a {
+                outline: none;
+                img {
+                    width: 50px;
+                }
+            }
+        }
+        .header-center {
+            .collapse {
+                display: flex;
+                justify-content: center;
+                .navbar-nav {
+                    .nav-item {
+                        .nav-link {
+                            margin-right: $mg-6;
+                            padding: 0;
+                            @include text($color-black-0, $fs-0, $fw-regular);
+                            transition: all 0.2s;
+                            &:hover {
+                                color: $color-red;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .header-right {
+            display: flex;
+            justify-content: flex-end;
+            .userInfo {
+                margin-right: $mg-3;
+                .nameUser {
+                    margin-right: $mg-0;
+                    img {
+                        width: 30px;
+                        border-radius: 25px;
+                        margin-right: $mg-0;
+                        margin-top: -$mg-3;
+                    }
+                    @include text($color-black-0, $fs-4, $fw-medium);
+                }
+                .btnLogout {
+                    @include text($color-white-0, $fs-2, $fw-medium);
+                    @extend .border-radius;
+                    padding: $pd-0 - 3 $pd-0;
+                    background-color: $color-red;
+                    border: none;
+                }
+            }
+            .avatar {
+                padding: 0 11px 0 0;
+                border-right: 1px solid $color-gray-0;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    img {
+                        width: 30px;
+                        border-radius: 25px;
+                        margin-right: $mg-0;
+                    }
+                    span {
+                        @include text($color-gray-0, $fs-2, $fw-normal);
+                    }
+                }
+            }
+            .location {
+                padding: 0 25px 0 10px;
+                line-height: 2;
+                a {
+                    &:hover {
+                        text-decoration: none;
+                    }
+                    img {
+                        width: 30px;
+                        border-radius: 25px;
+                        margin-right: $mg-0;
+                    }
+                    span {
+                        @include text($color-gray-0, $fs-2, $fw-normal);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("medium")) {
+    .header {
+        .header-center {
+            display: none;
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("small")) {
+    .header {
+        .header-center {
+            display: none;
+        }
+        .header-right {
+            display: none !important;
+        }
+    }
+}

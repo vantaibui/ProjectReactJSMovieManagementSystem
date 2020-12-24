@@ -1,0 +1,7 @@
+.span--red {
+    @include span(33px, $color-red, 4px, $color-white-0, $fs-0, $fw-normal, center, 0, $pd-0 - 4);
+}
+
+.span--green {
+    @include span(33px, $color-green, 4px, $color-white-0, $fs-0, $fw-normal, center, 0, $pd-0 - 4);
+}

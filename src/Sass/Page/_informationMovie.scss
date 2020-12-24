@@ -1,0 +1,445 @@
+.informationMovie {
+    background-color: $color-black-4;
+    .informationMovie__content {
+        transform: translate(0, -70px);
+        padding: 0 $pd-2;
+        .nav {
+            .nav-item {
+                .nav-link {
+                    @include text($color-white-0, $fs-4, $fw-normal);
+                    transition: all 0.2s;
+                    &.active {
+                        @include text($color-red, $fs-5, $fw-normal);
+                    }
+                    &:hover {
+                        font-size: $fs-5;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            margin-top: $mg-10;
+            width: 100%;
+            #showTimes {
+                background-color: $color-white-0;
+                @extend .border-radius;
+                .row {
+                    margin: 0;
+                    .listTheater {
+                        padding: 0;
+                        .nav-link {
+                            background-color: $color-white-0;
+                            width: 100%;
+                            opacity: 0.7;
+                            padding: 20px;
+                            border-radius: 0;
+                            border-bottom: 1px solid $color-gray-8;
+                            .infoTheater {
+                                margin: 0;
+                                padding: 0;
+                                .imgTheater {
+                                    padding: 0;
+                                    img {
+                                        padding: 0;
+                                        width: 50px;
+                                        margin-right: 10px;
+                                    }
+                                }
+                                .desTheater {
+                                    padding: 0;
+                                    p {
+                                        margin: 0;
+                                        text-transform: uppercase;
+                                    }
+                                    p:first-child {
+                                        @include text($color-black-0, $fs-3, $fw-medium);
+                                    }
+                                    p:last-child {
+                                        img {
+                                            width: 13px;
+                                            margin: 0;
+                                        }
+                                        span {
+                                            @include text($color-red, $fs-2, $fw-regular);
+                                        }
+                                    }
+                                }
+                                .desCustomer {
+                                    display: flex;
+                                    align-items: center;
+                                }
+                            }
+                            &.active {
+                                background-color: $color-white-0;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .contentST {
+                        padding: 0;
+                        .contentST__content {
+                            height: 621px;
+                            max-height: 621px;
+                            overflow-x: hidden;
+                            overflow-y: auto;
+                            &::-webkit-scrollbar {
+                                width: 5px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                box-shadow: inset 0 0 5px grey;
+                                border-radius: 10px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background: $color-red;
+                                border-radius: 10px;
+                            }
+                            &::-webkit-scrollbar-thumb:hover {
+                                background: #b30000;
+                            }
+                            margin: 0;
+                            padding: $pd-3 $pd-3 $pd-1 $pd-3;
+                            .showTimesInfo {
+                                border-bottom: 1px solid $color-gray-5;
+                                margin-top: $mg-3;
+                                .theaterInfo {
+                                    .imgTheater {
+                                        padding: 0;
+                                        width: 50px;
+                                        height: 45px;
+                                    }
+                                    .infoContent {
+                                        padding: 0;
+                                        padding-left: 10px;
+                                        p {
+                                            margin: 0;
+                                            span:first-child {
+                                                @include text($color-red, $fs-3, $fw-medium);
+                                            }
+                                            span:last-child {
+                                                @include text($color-black-0, $fs-3, $fw-medium);
+                                            }
+                                        }
+                                    }
+                                }
+                                .movieSessions {
+                                    .listTime {
+                                        .timeItem {
+                                            padding: 0;
+                                            padding: 8px;
+                                            margin: 0 10px 10px 0;
+                                            text-decoration: none;
+                                            border-radius: 7px;
+                                            border: 1px solid $color-white-6;
+                                            background-color: rgba(246, 246, 246, 0.5);
+                                            @include text($color-gray-1, $fs-0, $fw-regular);
+                                            transition: all 0.2s;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            span:first-child {
+                                                padding-right: 7px;
+                                                letter-spacing: -2px;
+                                                @include text($color-green-4, $fs-4, $fw-medium);
+                                            }
+                                            span:last-child {
+                                                @include text($color-gray-1, $fs-0, $fw-medium);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #info {
+                .inforTop {
+                    width: 100%;
+                    margin: 0;
+                    .infor-left {
+                        padding: 0 $pd-0 - 2;
+                        .left__item {
+                            margin: 0 0 $mg-3;
+                            p {
+                                margin-bottom: $mg-3;
+                                padding: 0;
+                                @include text($color-white-4, $fs-0, $fw-normal);
+                            }
+                        }
+                    }
+                    .infor-right {
+                        padding: 0 $pd-0 - 2 0 $pd-1;
+                        .right__item {
+                            p {
+                                margin-bottom: $mg-3;
+                                @include text($color-white-4, $fs-0, $fw-normal);
+                            }
+                            .itemTitle {
+                                margin-bottom: $mg-3;
+                            }
+                            .itemContent {
+                                margin-bottom: $mg-3;
+                                p {
+                                    text-align: justify;
+                                }
+                            }
+                        }
+                    }
+                }
+                .inforBottom {
+                    .bottomTitle {
+                        margin-bottom: $mg-3;
+                        p {
+                            margin: $mg-7 * 2 0 $mg-6;
+                            padding: 0 7px;
+                            @include text($color-white-4, $fs-0, $fw-normal);
+                        }
+                    }
+                    .bottomContent {
+                        width: 33%;
+                        padding-bottom: 20px;
+                        a {
+                            transition: all 0.2s;
+                            .bottomImg {
+                                width: 100%;
+                                background-color: $color-gray-5;
+                                margin-bottom: $mg-6;
+                                @extend .border-radius;
+                                img {
+                                    max-width: 737px;
+                                    width: 100%;
+                                    height: 129px;
+                                    object-fit: cover;
+                                    @extend .border-radius;
+                                }
+                            }
+                            .bottomReview {
+                                p {
+                                    margin-bottom: $mg-2 - 1;
+                                    line-height: 26px;
+                                    height: 50px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    @include text($color-white-0, $fs-3, $fw-normal);
+                                }
+                            }
+                            &:hover {
+                                text-decoration: none;
+                                .bottomTitle {
+                                    p {
+                                        @include text($color-red, $fs-3, $fw-normal);
+                                    }
+                                }
+                            }
+                        }
+                        .bottom__icon {
+                            display: flex;
+                            align-content: center;
+                            padding-top: $pd-1;
+                            .like {
+                                margin-right: $mg-7;
+                                img {
+                                    margin: $mg-0 - 3 $mg-3 0 0;
+                                    width: 16px;
+                                    height: auto;
+                                }
+                                span {
+                                    color: $color-white-0;
+                                }
+                            }
+                            .comment {
+                                a {
+                                    img {
+                                        margin: $mg-0 - 3 $mg-3 0 0;
+                                        width: 16px;
+                                        height: auto;
+                                    }
+                                    span {
+                                        color: $color-white-0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            #evaluate {
+                .listComment {
+                    .commentItem {
+                        border: 1px solid #e6e6e6;
+                        border-radius: 3px;
+                        background-color: $color-white-0;
+                        max-width: 580px;
+                        margin: $mg-5 auto 0;
+                        padding: $pd-3 $pd-3 $pd-1 + 2;
+                        .commentReviewer {
+                            .infoReviewer {
+                                display: flex;
+                                .reviewer {
+                                    display: flex;
+                                    text-align: left;
+                                    padding: 0;
+                                    img {
+                                        width: 32px;
+                                        height: 32px;
+                                        border-radius: 25px;
+                                    }
+                                    span {
+                                        margin-left: $mg-3;
+                                        p:first-child {
+                                            margin: 0;
+                                            @include text($color-black-0, $fs-0, $fw-normal);
+                                            img {
+                                                width: 18px;
+                                                height: 18px;
+                                            }
+                                        }
+                                        p:last-child {
+                                            margin-bottom: $mg-3;
+                                            @include text($color-gray-1, $fs-1 - 2, $fw-normal);
+                                        }
+                                    }
+                                }
+                                .numberOfReviews {
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    padding: 0;
+                                    .rate {
+                                        text-align: center;
+                                        p {
+                                            margin: 0;
+                                        }
+                                        p:first-child {
+                                            @include text($color-green-2, $fs-3, $fw-normal);
+                                        }
+                                        p:last-child {
+                                            display: flex;
+                                            justify-content: center;
+                                            margin-top: $mg-3;
+                                            img {
+                                                max-width: 8px;
+                                                width: 100%;
+                                                height: auto;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .commentContent {
+                                padding: $pd-3 0;
+                                p {
+                                    margin: 0;
+                                    @include text($color-gray-3, $fs-0, $fw-normal);
+                                }
+                                p:last-child {
+                                    color: $color-red;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        .likes {
+                            border-top: 1px solid $color-white-5;
+                            padding-top: 10px;
+                            img {
+                                width: 16px;
+                                height: auto;
+                                margin-right: 10px;
+                                transition: all 0.2s;
+                                &:hover {
+                                    width: 18px;
+                                }
+                            }
+                            span {
+                                @include text(#737576, $fs-0, $fw-normal);
+                                strong {
+                                    font-weight: $fw-bold + 100;
+                                }
+                            }
+                        }
+                    }
+                }
+                .btn--white {
+                    margin-top: 35px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+    .detailWidth {
+        max-width: 870px;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .informationMovie {
+        .informationMovie__content {
+            transform: translate(0, 0);
+            padding: 0;
+            .nav {
+                padding-top: $pd-3;
+            }
+            .tab-content {
+                .inforBottom {
+                    .bottomContent {
+                        width: 100% !important;
+                        padding: 0 $pd-0 - 2;
+                        a {
+                            .bottomImg {
+                                img {
+                                    max-width: none;
+                                    height: 100% !important;
+                                }
+                            }
+                            .bottomReview {
+                                margin-bottom: $mg-2;
+                                padding: $pd-0 / 3 0 0 $pd-1 + 2;
+                            }
+                        }
+                        .bottom__icon {
+                            .like,
+                            .comment {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQueryMax(getBreakpoints("medium")) {
+    .informationMovie {
+        .informationMovie__content {
+            .nav {
+                padding-top: $pd-3;
+            }
+            .tab-content {
+                .inforBottom {
+                    .bottomContent {
+                        width: 100% !important;
+                        padding: 0 $pd-0 - 2;
+                        a {
+                            .bottomImg {
+                                img {
+                                    max-width: none;
+                                }
+                            }
+                            .bottomReview {
+                                margin-bottom: $mg-2;
+                                padding: $pd-0 / 3 0 0 $pd-1 + 2;
+                            }
+                        }
+                        .bottom__icon {
+                            .like,
+                            .comment {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
